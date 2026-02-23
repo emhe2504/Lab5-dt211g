@@ -38,3 +38,9 @@
     border: 3px solid #A64D79;
     letter-spacing: 0.5px;
 }
+
+@mixin sectionStyling() {
+    background-color: #FFE3ED;
+    border: 3px solid #A64D79;
+    letter-spacing: 0.5px;
+}

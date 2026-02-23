@@ -303,6 +303,13 @@ main {
 
 }
 
+#diagramText,
+#courseSection {
+    @include mixins.articlePlacement();
+    justify-content: center;
+    text-align: center;
+}
+
 footer {
     margin-top: 4%;
     padding: 1%;

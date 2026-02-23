@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Laboration 5</title>
   <link rel="stylesheet" href="/src/css/main.scss">
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 
 <body>
@@ -26,10 +27,15 @@
       </nav>
     </header>
     <main>
-      <article id="starttext">
+      <article id="diagramText">
         <h2>Diagram</h2>
-        <p>Här är sidan för diagram.</p>
+        <p>Välkommen till sidan för diagram. Här får du veta mer om MittUniversitets populäraste kurser och program.</p>
       </article>
+      <section id="courseSection">
+        <h3>Kurser</h3>
+        <p>Mittuniversitetets 6 mest populära kurser:</p>
+        <div id="chart"></div>
+      </section>
     </main>
     <footer>
       <h4>Webbutvecklingsprogrammet, kurs DT211G - Frontend-baserad webbutveckling</h4>

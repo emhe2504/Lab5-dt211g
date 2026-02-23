@@ -356,6 +356,33 @@ main {
 
 }
 
+#diagramText,
+#courseSection {
+    @include mixins.sectionStyling();
+
+    @media (prefers-color-scheme: dark) {
+        background-color: variables.$primary-dark;
+    }
+
+    h2 {
+        font-size: 190%;
+        color: #A64D79;
+
+        @media (prefers-color-scheme: dark) {
+            color: variables.$head-dark;
+        }
+    }
+
+    h3 {
+        font-size: 170%;
+        color: #A64D79;
+
+        @media (prefers-color-scheme: dark) {
+            color: variables.$head-dark;
+        }
+    }
+}
+
 footer {
     background-color: variables.$primary-light;
 
