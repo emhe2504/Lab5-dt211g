@@ -1,0 +1,139 @@
+@keyframes animationArticle {
+    0% {
+        background-color: rgb(250, 224, 229);
+    }
+
+    50% {
+        background-color: rgb(224, 242, 248);
+    }
+
+    100% {
+        background-color: rgb(217, 236, 231);
+    }
+}
+
+@keyframes animationArtDark {
+    0% {
+        background-color: rgb(28, 36, 94);
+    }
+
+    50% {
+        background-color: rgb(16, 83, 95);
+    }
+
+    100% {
+        background-color: rgb(66, 25, 46);
+    }
+}
+
+@keyframes HeadSize {
+    0% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes HeadShadow {
+    5% {
+        text-shadow: 10px 10px 50px rgb(17, 58, 240);
+    }
+
+    50% {
+        text-shadow: 5px 5px 25px rgb(6, 51, 250);
+    }
+
+    100% {
+        text-shadow: 0px 0px 15px rgb(6, 51, 250);
+    }
+}
+
+@keyframes animationIMG {
+    0% {
+        transform: rotate(2deg);
+    }
+
+    50% {
+        transform: rotate(3deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes movingIMG {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(500px, 0);
+    }
+
+    40% {
+        transform: translate(500px, -250px);
+    }
+
+    65% {
+        transform: translate(-500px, -250px);
+    }
+
+    80% {
+        transform: translate(-500px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes movingSmallIMG {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(100px, 0);
+    }
+
+    40% {
+        transform: translate(100px, -200px);
+    }
+
+    65% {
+        transform: translate(-100px, -200px);
+    }
+
+    80% {
+        transform: translate(-100px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes mainReaction {
+    25% {
+        background-color: rgb(252, 29, 185);
+    }
+
+    50% {
+        background-color: rgb(55, 84, 245);
+    }
+
+    75% {
+        background-color: rgb(226, 245, 55);
+    }
+
+    100% {
+        background-color: rgb(55, 245, 87);
+    }
+}

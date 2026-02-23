@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboration 5</title>
+  <link rel="stylesheet" href="/src/css/main.scss">
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1><a href="/">Styling med SCSS</a></h1>
+      <input type="button" id="menu" class="is_hidden" value="Meny &#9776;">
+      <nav>
+        <ul id="nav-list" class="is_hidden">
+          <li><a href="/">Startsida</a></li>
+          <li><a href="/SASS.html">SASS</a></li>
+          <li><a href="/animation.html">Animationer</a></li>
+          <li><a href="/movingobjects.html">Rörliga objekt</a></li>
+          <li><a href="/interaction.html">Interaktioner</a></li>
+          <li><a href="/diagram.html">Diagram</a></li>
+          <li><a href="/map.html">Karta</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="SASS-text">
+        <h2>SASS</h2>
+        <p>Här är min tankar kring att börja arbeta med SCSS:</p>
+        <article id="art1">
+          <h3>Fördelar:</h3>
+          <div>
+            <p>Jag ser absolut fördelarna med att använda alla nya funktioner som kommer med SCSS. Ett exempel på detta
+              är när jag bestämmer mig för att ändra färger. Det är vanligt att jag brukar känna mig missnöjd med mina
+              färgval och vilja ändra dessa. Detta blir så mycket lättare om färgerna ligger lagrade i variabler och du
+              inte behöver ändra alla färger överallt själv. Tycker även mixins är väldigt smart.</p>
+            <p id="up">&#10003;</p>
+          </div>
+        </article>
+        <article id="art2">
+          <h3>Nackdelar:</h3>
+          <div>
+            <p>En nackdel jag såg när jag började med SCSS är att det upplevs rörigt med alla partials och att hålla
+              reda på vad alla partials ska heta samt vilket innehåll som lämpar sig till vilken partial. Har behövt
+              googla lite
+              här för att förstå mig på detta och har säkert gjort detta lite tokigt ändå. Visst är det rörigt med ett
+              enda långt css dokument med, men hade i skrivande stund (innan jag lärt mig allt) upplevt det lättare om
+              jag fick använda olika css-filer för olika delar då det är vad jag är van vid. Förstår dock att jag kommer
+              komma in i det med SCSS. Upplevder det även lite otyligt när inheritance vs. mixin är bäst att använda.
+            </p>
+            <p id="down">&#10005;</p>
+          </div>
+        </article>
+        <article id="art3">
+          <h3>Sammantaget:</h3>
+          <p>Sammantaget har det varit roligt att testa arbeta med SCSS. Ser just nu fördelar och nackdelar med det, men
+            nackdelarna kommer mest av att jag inte kan allt än och det är lite klurigt att förstå sig på saker. Till
+            exempel media queries för responsivitet, men efter att jag googlat har jag förstått det som att detta läggs
+            direkt vid elementet, så jag hopppas det är korrekt. Det är effektivt med den automatiserade
+            arbetsprocessen, även om denna också är lite lurig att lära sig med alla kommandon i terminalen. Det
+            kommer nog bli lättare att förstå sig på SCSS, och alla funktioner det kommer med, desto mer jag får använda
+            det och förstå mig på det.</p>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <h4>Webbutvecklingsprogrammet, kurs DT211G - Frontend-baserad webbutveckling</h4>
+      <p>2026 - Emma Heikkinen</p>
+    </footer>
+  </div>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>

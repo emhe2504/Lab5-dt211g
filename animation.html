@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboration 5</title>
+  <link rel="stylesheet" href="/src/css/main.scss">
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1><a href="/">Styling med SCSS</a></h1>
+      <input type="button" id="menu" class="is_hidden" value="Meny &#9776;">
+      <nav>
+        <ul id="nav-list" class="is_hidden">
+          <li><a href="/">Startsida</a></li>
+          <li><a href="/SASS.html">SASS</a></li>
+          <li><a href="/animation.html">Animationer</a></li>
+          <li><a href="/movingobjects.html">Rörliga objekt</a></li>
+          <li><a href="/interaction.html">Interaktioner</a></li>
+          <li><a href="/diagram.html">Diagram</a></li>
+          <li><a href="/map.html">Karta</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article id="ani-art">
+        <h2>Animationer</h2>
+        <p>Välkommen till sidan för animationer. På denna sida kommer det finnas animationer på text och bilder i form
+          av:</p>
+        <ul id="ani-list">
+          <li>Skugga</li>
+          <li>Färgförändringar</li>
+          <li>Storleksförändringar</li>
+          <li>Rörelser (bilderna rör sig när sidan laddas)</li>
+        </ul>
+      </article>
+      <section id="ani-sec">
+        <h3>Bilder</h3>
+        <div id="bilder">
+          <picture>
+            <source srcset="/images/blomma1.webp" type="image/webp">
+            <img src="/images/blomma1.jpg" id="img1" width="300" alt="Blommor sittandes i gardin samt grön växt">
+          </picture>
+          <picture>
+            <source srcset="/images/blomma2.webp" type="image/webp">
+            <img src="/images/blomma2.jpg" id="img2" width="300" alt="Blommor sittandes i gardin samt grön växt">
+          </picture>
+          <picture>
+            <source srcset="/images/blomma3.webp" type="image/webp">
+            <img src="/images/blomma3.jpg" id="img3" width="300" alt="Blommor sittandes i gardin samt grön växt">
+          </picture>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <h4>Webbutvecklingsprogrammet, kurs DT211G - Frontend-baserad webbutveckling</h4>
+      <p>2026 - Emma Heikkinen</p>
+    </footer>
+  </div>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>

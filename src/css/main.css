@@ -1,0 +1,950 @@
+.is_hidden {
+  display: none !important;
+}
+
+.is_paused {
+  animation-play-state: paused !important;
+  background-color: #FFE3ED !important;
+}
+@media (prefers-color-scheme: dark) {
+  .is_paused {
+    background-color: #234C6A !important;
+  }
+}
+
+.paused {
+  animation-play-state: paused !important;
+  background-color: #E1AFD1 !important;
+}
+@media (prefers-color-scheme: dark) {
+  .paused {
+    background-color: #213C51 !important;
+  }
+}
+
+header h1 a {
+  display: inline-block;
+  color: #8A244B;
+  font-size: 130%;
+  text-decoration: none;
+}
+@media (prefers-color-scheme: dark) {
+  header h1 a {
+    color: #DDAED3;
+  }
+}
+header nav ul {
+  background-color: #FFE3ED;
+}
+@media (prefers-color-scheme: dark) {
+  header nav ul {
+    background-color: #234C6A;
+  }
+}
+header nav ul a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 120%;
+  color: #8A244B;
+  border-bottom: 1px solid #8A244B;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 3%;
+}
+@media (prefers-color-scheme: dark) {
+  header nav ul a {
+    color: #DDAED3;
+    border-bottom: 1px solid #DDAED3;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  header nav ul a {
+    padding-bottom: 1%;
+    margin-bottom: 4%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  header nav ul a {
+    font-size: 110%;
+  }
+}
+header nav ul a:hover {
+  transform: scale(1.1);
+  border-bottom: 2px solid #8A244B;
+}
+@media (prefers-color-scheme: dark) {
+  header nav ul a:hover {
+    border-bottom: 2px solid #DDAED3;
+  }
+}
+
+body {
+  background-color: #E1AFD1;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: black;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #213C51;
+    color: #EEEEEE;
+  }
+}
+
+main #starttext,
+main #SASS-text {
+  background-color: #FFE3ED;
+  border: 2px solid #8A244B;
+}
+@media (prefers-color-scheme: dark) {
+  main #starttext,
+  main #SASS-text {
+    background-color: #234C6A;
+    border: 2px solid #DDAED3;
+  }
+}
+main #starttext h2,
+main #SASS-text h2 {
+  color: #8A244B;
+  font-size: 180%;
+}
+@media (prefers-color-scheme: dark) {
+  main #starttext h2,
+  main #SASS-text h2 {
+    color: #DDAED3;
+  }
+}
+main #starttext p,
+main #SASS-text p {
+  letter-spacing: 0.5px;
+  font-size: 110%;
+}
+@media only screen and (max-width: 650px) {
+  main #starttext p,
+  main #SASS-text p {
+    font-size: 100%;
+  }
+}
+main #starttext ul,
+main #SASS-text ul {
+  line-height: 2em;
+}
+main #SASS-text article h3 {
+  color: #8A244B;
+  font-size: 140%;
+}
+@media (prefers-color-scheme: dark) {
+  main #SASS-text article h3 {
+    color: #DDAED3;
+  }
+}
+main #SASS-text article div #up {
+  font-size: 270%;
+  color: rgb(79, 110, 101);
+}
+@media (prefers-color-scheme: dark) {
+  main #SASS-text article div #up {
+    color: rgb(180, 211, 202);
+  }
+}
+main #SASS-text article div #down {
+  font-size: 270%;
+  color: rgb(141, 62, 62);
+}
+@media (prefers-color-scheme: dark) {
+  main #SASS-text article div #down {
+    color: rgb(207, 148, 148);
+  }
+}
+main #SASS-text article p {
+  line-height: 1.5em;
+  letter-spacing: 0.5px;
+}
+main #SASS-text #art1 {
+  background-color: rgb(179, 206, 192);
+  border: 2px solid rgb(79, 110, 101);
+}
+@media (prefers-color-scheme: dark) {
+  main #SASS-text #art1 {
+    background-color: rgb(70.952, 110.048, 89.776);
+  }
+}
+main #SASS-text #art2 {
+  background-color: rgb(247, 182, 182);
+  border: 2px solid rgb(141, 62, 62);
+}
+@media (prefers-color-scheme: dark) {
+  main #SASS-text #art2 {
+    background-color: rgb(130.6125, 15.1875, 15.1875);
+  }
+}
+main #SASS-text #art3 {
+  background-color: rgb(245, 234, 175);
+  border: 2px solid rgb(219, 169, 3);
+}
+@media (prefers-color-scheme: dark) {
+  main #SASS-text #art3 {
+    background-color: rgb(8.275862069, 44.1379310345, 71.724137931);
+    border: 2px solid rgb(180, 205, 243);
+  }
+}
+main #bubble-section #section-head {
+  color: #8A244B;
+  font-size: 135%;
+}
+@media (prefers-color-scheme: dark) {
+  main #bubble-section #section-head {
+    color: #DDAED3;
+  }
+}
+main #bubble-section #bubble1,
+main #bubble-section #bubble2,
+main #bubble-section #bubble3 {
+  background-color: #FFE3ED;
+  border: 2px solid #8A244B;
+}
+@media (prefers-color-scheme: dark) {
+  main #bubble-section #bubble1,
+  main #bubble-section #bubble2,
+  main #bubble-section #bubble3 {
+    background-color: #234C6A;
+    border: 2px solid #DDAED3;
+    color: #EEEEEE;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  main #bubble-section #bubble1 h3,
+  main #bubble-section #bubble2 h3,
+  main #bubble-section #bubble3 h3 {
+    color: #DDAED3;
+  }
+}
+
+#ani-art {
+  background-color: white;
+  border: 3px solid #A64D79;
+  letter-spacing: 0.5px;
+}
+@media (prefers-color-scheme: dark) {
+  #ani-art {
+    background-color: #234C6A;
+  }
+}
+#ani-art h2 {
+  font-size: 190%;
+  color: #A64D79;
+}
+@media (prefers-color-scheme: dark) {
+  #ani-art h2 {
+    color: #DDAED3;
+  }
+}
+#ani-art p,
+#ani-art ul {
+  font-size: 110%;
+}
+
+#ani-sec {
+  background-color: white;
+  border: 3px solid #A64D79;
+  letter-spacing: 0.5px;
+}
+@media (prefers-color-scheme: dark) {
+  #ani-sec {
+    background-color: #234C6A;
+  }
+}
+#ani-sec h3 {
+  font-size: 180%;
+  color: #A64D79;
+  text-align: center;
+  margin-bottom: 4%;
+}
+@media (prefers-color-scheme: dark) {
+  #ani-sec h3 {
+    color: #DDAED3;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  #ani-sec #img1,
+  #ani-sec #img2,
+  #ani-sec #img3 {
+    width: 280px;
+    margin-top: 2%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #ani-sec #img1,
+  #ani-sec #img2,
+  #ani-sec #img3 {
+    width: 230px;
+  }
+}
+
+#mov-art,
+#int-art,
+#mov-sec,
+#int-sec {
+  background-color: white;
+  border: 3px solid #A64D79;
+  letter-spacing: 0.5px;
+  background-color: #FFE3ED;
+}
+@media (prefers-color-scheme: dark) {
+  #mov-art,
+  #int-art,
+  #mov-sec,
+  #int-sec {
+    background-color: #234C6A;
+  }
+}
+#mov-art h2,
+#int-art h2,
+#mov-sec h2,
+#int-sec h2 {
+  font-size: 190%;
+  color: #A64D79;
+}
+@media (prefers-color-scheme: dark) {
+  #mov-art h2,
+  #int-art h2,
+  #mov-sec h2,
+  #int-sec h2 {
+    color: #DDAED3;
+  }
+}
+#mov-art p,
+#mov-art ul,
+#int-art p,
+#int-art ul,
+#mov-sec p,
+#mov-sec ul,
+#int-sec p,
+#int-sec ul {
+  font-size: 110%;
+}
+
+#mov-sec h3,
+#int-sec h3 {
+  font-size: 180%;
+  color: #A64D79;
+  text-align: center;
+  margin-bottom: 4%;
+}
+@media (prefers-color-scheme: dark) {
+  #mov-sec h3,
+  #int-sec h3 {
+    color: #DDAED3;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #ani-art h2,
+  #ani-sec h2,
+  #mov-art h2,
+  #mov-sec h2,
+  #int-art h2,
+  #int-sec h2 {
+    font-size: 160%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #ani-art h3,
+  #ani-sec h3,
+  #mov-art h3,
+  #mov-sec h3,
+  #int-art h3,
+  #int-sec h3 {
+    font-size: 150%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #ani-art p,
+  #ani-art ul,
+  #ani-sec p,
+  #ani-sec ul,
+  #mov-art p,
+  #mov-art ul,
+  #mov-sec p,
+  #mov-sec ul,
+  #int-art p,
+  #int-art ul,
+  #int-sec p,
+  #int-sec ul {
+    font-size: 100%;
+  }
+}
+
+footer {
+  background-color: #FFE3ED;
+}
+@media (prefers-color-scheme: dark) {
+  footer {
+    background-color: #234C6A;
+  }
+}
+
+main #starttext,
+main #SASS-text {
+  width: 60%;
+  justify-self: center;
+  padding: 1%;
+  margin-bottom: 0;
+  margin-top: 3%;
+}
+
+#bubble-section #letter {
+  transform: rotate(5deg);
+}
+
+#menu {
+  display: grid;
+  width: 15%;
+  justify-self: left;
+  color: #8A244B;
+  font-weight: bold;
+  font-size: 120%;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-left: 4%;
+  border: none;
+  background-color: #FFE3ED;
+}
+@media (prefers-color-scheme: dark) {
+  #menu {
+    color: #DDAED3;
+    background-color: #234C6A;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #menu {
+    width: 24%;
+    font-size: 100%;
+    padding: 0.5%;
+  }
+}
+
+#button {
+  display: grid;
+  width: 25%;
+  padding: 1%;
+  justify-self: center;
+  font-weight: bold;
+  font-size: 100%;
+  box-shadow: 2px 2px 7px rgb(94, 90, 90);
+  background-color: #FFE3ED;
+}
+@media only screen and (max-width: 900px) {
+  #button {
+    width: 35%;
+    margin: 2%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #button {
+    width: 40%;
+    font-size: 95%;
+  }
+}
+
+#button:hover {
+  background-color: rgb(250, 169, 196);
+  transition: background-color 0.8s ease;
+}
+
+#container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  display: grid;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: grid;
+  margin-bottom: 3%;
+}
+header h1 {
+  padding: 1%;
+  text-align: center;
+}
+@media only screen and (max-width: 650px) {
+  header h1 {
+    font-size: 160%;
+  }
+}
+header nav {
+  display: grid;
+  width: 100%;
+}
+header ul {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(7, 1fr);
+  justify-self: center;
+  text-align: center;
+  list-style: none;
+  padding-left: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+@media only screen and (max-width: 1250px) {
+  header ul {
+    grid-template-columns: none;
+    width: 30%;
+    justify-self: left;
+    margin-left: 4%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header ul {
+    width: 45%;
+  }
+}
+
+main {
+  display: grid;
+}
+main #starttext,
+main #SASS-text {
+  display: grid;
+}
+@media only screen and (max-width: 1050px) {
+  main #starttext,
+  main #SASS-text {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  main #starttext,
+  main #SASS-text {
+    width: 85%;
+  }
+}
+main #starttext h2,
+main #SASS-text h2 {
+  text-align: center;
+}
+main #starttext p,
+main #SASS-text p {
+  margin-top: 4%;
+  text-align: center;
+}
+main #SASS-text article {
+  width: 95%;
+  justify-self: center;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+main #SASS-text article h3 {
+  margin-left: 3%;
+  margin-bottom: 0;
+}
+main #SASS-text article div {
+  display: grid;
+  grid-template-columns: 60% 1fr;
+}
+@media only screen and (max-width: 1050px) {
+  main #SASS-text article div {
+    grid-template-columns: none;
+  }
+}
+main #SASS-text article div #up,
+main #SASS-text article div #down {
+  text-align: center;
+  align-self: center;
+}
+main #SASS-text article p {
+  text-align: left;
+  max-width: 68ch;
+  margin-left: 2%;
+}
+@media only screen and (max-width: 1050px) {
+  main #SASS-text article p {
+    max-width: 85%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  main #SASS-text article p {
+    max-width: 95%;
+  }
+}
+main picture {
+  justify-self: right;
+  margin-right: 10%;
+  margin-top: 0;
+}
+@media only screen and (max-width: 1050px) {
+  main picture {
+    margin-right: 5%;
+  }
+}
+main #bubble-section #section-head {
+  margin-left: 3%;
+}
+main #bubble-section #bubble1,
+main #bubble-section #bubble2 {
+  display: grid;
+  width: 35%;
+  justify-self: left;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  padding: 2%;
+}
+@media only screen and (max-width: 1050px) {
+  main #bubble-section #bubble1,
+  main #bubble-section #bubble2 {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  main #bubble-section #bubble1,
+  main #bubble-section #bubble2 {
+    width: 75%;
+  }
+}
+main #bubble-section #bubble3 {
+  display: grid;
+  width: 35%;
+  justify-self: left;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  padding: 2%;
+}
+@media only screen and (max-width: 1050px) {
+  main #bubble-section #bubble3 {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  main #bubble-section #bubble3 {
+    width: 75%;
+  }
+}
+main #bubble-section #bubble3 #forAnswer {
+  width: 15%;
+}
+main #letter {
+  align-self: end;
+  justify-self: left;
+  margin-left: 4%;
+  margin-top: 4%;
+}
+@media only screen and (max-width: 650px) {
+  main #letter img {
+    width: 200px;
+  }
+}
+
+#main {
+  display: grid;
+}
+
+#ani-art {
+  display: grid;
+  width: 65%;
+  justify-self: center;
+  margin: 2%;
+  padding: 2%;
+}
+#ani-art h2 {
+  display: grid;
+  text-align: center;
+}
+#ani-art p {
+  display: grid;
+  text-align: center;
+}
+#ani-art ul {
+  display: grid;
+  line-height: 2em;
+}
+
+#ani-sec {
+  display: grid;
+  width: 65%;
+  justify-self: center;
+  margin: 2%;
+  padding: 2%;
+}
+#ani-sec #bilder {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  justify-self: center;
+}
+@media only screen and (max-width: 1200px) {
+  #ani-sec #bilder {
+    grid-template-columns: none;
+  }
+}
+#ani-sec #bilder picture {
+  margin: 1%;
+  justify-self: center;
+}
+
+#mov-art,
+#int-art {
+  display: grid;
+  width: 65%;
+  justify-self: center;
+  margin: 2%;
+  padding: 2%;
+}
+#mov-art h2,
+#int-art h2 {
+  display: grid;
+  text-align: center;
+}
+#mov-art p,
+#int-art p {
+  display: grid;
+  text-align: center;
+}
+#mov-art ul,
+#int-art ul {
+  display: grid;
+  line-height: 2em;
+}
+
+#mov-sec {
+  display: grid;
+  width: 65%;
+  justify-self: center;
+  margin: 2%;
+  padding: 2%;
+  margin-top: 20%;
+}
+@media only screen and (max-width: 650px) {
+  #mov-sec {
+    margin-top: 30%;
+    margin-bottom: 15%;
+  }
+}
+#mov-sec picture {
+  position: relative;
+  margin: 1%;
+  justify-self: center;
+}
+@media only screen and (max-width: 900px) {
+  #mov-sec #img1 {
+    width: 180px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  #mov-sec #img1 {
+    width: 130px;
+  }
+}
+
+#int-sec {
+  display: grid;
+  width: 65%;
+  justify-self: center;
+  margin: 2%;
+  padding: 2%;
+}
+@media only screen and (max-width: 1250px) {
+  #int-sec {
+    margin-top: 10%;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  #int-sec {
+    margin-bottom: 40%;
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  #ani-art,
+  #ani-sec,
+  #mov-art,
+  #mov-sec,
+  #int-art,
+  #int-sec {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #ani-art,
+  #ani-sec,
+  #mov-art,
+  #mov-sec,
+  #int-art,
+  #int-sec {
+    width: 85%;
+  }
+}
+
+footer {
+  margin-top: 4%;
+  padding: 1%;
+  text-align: center;
+}
+@media only screen and (max-width: 650px) {
+  footer {
+    font-size: 90%;
+  }
+}
+
+@keyframes animationArticle {
+  0% {
+    background-color: rgb(250, 224, 229);
+  }
+  50% {
+    background-color: rgb(224, 242, 248);
+  }
+  100% {
+    background-color: rgb(217, 236, 231);
+  }
+}
+@keyframes animationArtDark {
+  0% {
+    background-color: rgb(28, 36, 94);
+  }
+  50% {
+    background-color: rgb(16, 83, 95);
+  }
+  100% {
+    background-color: rgb(66, 25, 46);
+  }
+}
+@keyframes HeadSize {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+@keyframes HeadShadow {
+  5% {
+    text-shadow: 10px 10px 50px rgb(17, 58, 240);
+  }
+  50% {
+    text-shadow: 5px 5px 25px rgb(6, 51, 250);
+  }
+  100% {
+    text-shadow: 0px 0px 15px rgb(6, 51, 250);
+  }
+}
+@keyframes animationIMG {
+  0% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+@keyframes movingIMG {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(500px, 0);
+  }
+  40% {
+    transform: translate(500px, -250px);
+  }
+  65% {
+    transform: translate(-500px, -250px);
+  }
+  80% {
+    transform: translate(-500px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes movingSmallIMG {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(100px, 0);
+  }
+  40% {
+    transform: translate(100px, -200px);
+  }
+  65% {
+    transform: translate(-100px, -200px);
+  }
+  80% {
+    transform: translate(-100px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes mainReaction {
+  25% {
+    background-color: rgb(252, 29, 185);
+  }
+  50% {
+    background-color: rgb(55, 84, 245);
+  }
+  75% {
+    background-color: rgb(226, 245, 55);
+  }
+  100% {
+    background-color: rgb(55, 245, 87);
+  }
+}
+#ani-art {
+  animation: animationArticle 6s ease-in-out infinite;
+}
+@media (prefers-color-scheme: dark) {
+  #ani-art {
+    animation: animationArtDark 6s ease-in-out infinite;
+  }
+}
+#ani-art h2 {
+  animation: HeadSize 7s ease-in-out infinite;
+}
+
+#ani-sec h3 {
+  animation: HeadShadow 7s ease infinite;
+}
+#ani-sec #img1 {
+  animation: animationIMG 3s ease-in-out 1;
+}
+#ani-sec #img2 {
+  animation: animationIMG 3s 1s ease-in-out 1;
+}
+#ani-sec #img3 {
+  animation: animationIMG 3s 2s ease-in-out 1;
+}
+
+#mov-sec picture {
+  animation: movingIMG 15s linear infinite;
+}
+@media only screen and (max-width: 1200px) {
+  #mov-sec picture {
+    animation: movingSmallIMG 10s linear infinite;
+  }
+}
+
+#int-art {
+  animation: mainReaction 5s infinite alternate linear;
+}
+
+#int-sec {
+  animation: mainReaction 5s 1.5s infinite alternate linear;
+}
+
+#main {
+  animation: mainReaction 5s 2s infinite alternate linear;
+}
+
+/*# sourceMappingURL=main.css.map */

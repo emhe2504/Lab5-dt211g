@@ -1,0 +1,68 @@
+@use "variables";
+
+%text {
+    width: 60%;
+    justify-self: center;
+    padding: 1%;
+    margin-bottom: 0;
+    margin-top: 3%;
+}
+
+#bubble-section {
+
+    #letter {
+
+        transform: rotate(5deg);
+    }
+}
+
+#menu {
+    display: grid;
+    width: 15%;
+    justify-self: left;
+    color: variables.$head-light;
+    font-weight: bold;
+    font-size: 120%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 4%;
+    border: none;
+    background-color: variables.$primary-light;
+
+    @media (prefers-color-scheme: dark) {
+        color: variables.$head-dark;
+        background-color: variables.$primary-dark;
+    }
+
+    @media only screen and (max-width: 800px) {
+        width: 24%;
+        font-size: 100%;
+        padding: 0.5%;
+    }
+}
+
+#button {
+    display: grid;
+    width: 25%;
+    padding: 1%;
+    justify-self: center;
+    font-weight: bold;
+    font-size: 100%;
+    box-shadow: 2px 2px 7px rgb(94, 90, 90);
+    background-color: variables.$primary-light;
+
+    @media only screen and (max-width: 900px) {
+        width: 35%;
+        margin: 2%;
+    }
+
+    @media only screen and (max-width: 500px) {
+        width: 40%;
+        font-size: 95%;
+    }
+}
+
+#button:hover {
+    background-color: rgb(250, 169, 196);
+    transition: background-color 0.8s ease;
+}

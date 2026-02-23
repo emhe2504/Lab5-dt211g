@@ -1,0 +1,365 @@
+@use "variables";
+@use "mixins";
+
+.is_hidden {
+    display: none !important;
+}
+
+.is_paused {
+    animation-play-state: paused !important;
+    background-color: variables.$primary-light !important;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: variables.$primary-dark !important;
+    }
+}
+
+.paused {
+    animation-play-state: paused !important;
+    background-color: variables.$secondary-light !important;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: variables.$secondary-dark !important;
+    }
+}
+
+header {
+
+    h1 {
+
+        a {
+            display: inline-block;
+            color: variables.$head-light;
+            font-size: 130%;
+            text-decoration: none;
+
+            @media (prefers-color-scheme: dark) {
+                color: variables.$head-dark;
+            }
+        }
+    }
+
+    nav {
+
+        ul {
+            background-color: variables.$primary-light;
+
+            @media (prefers-color-scheme: dark) {
+                background-color: variables.$primary-dark;
+            }
+
+            a {
+                display: inline-block;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 120%;
+                color: variables.$head-light;
+                border-bottom: 1px solid variables.$head-light;
+                padding-left: 2%;
+                padding-right: 2%;
+                padding-bottom: 3%;
+
+                @media (prefers-color-scheme: dark) {
+                    color: variables.$head-dark;
+                    border-bottom: 1px solid variables.$head-dark;
+                }
+
+                @media only screen and (max-width: 1250px) {
+                    padding-bottom: 1%;
+                    margin-bottom: 4%;
+                }
+
+                @media only screen and (max-width: 650px) {
+                    font-size: 110%;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    border-bottom: 2px solid variables.$head-light;
+
+                    @media (prefers-color-scheme: dark) {
+                        border-bottom: 2px solid variables.$head-dark;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+body {
+    background-color: variables.$secondary-light;
+    font-family: variables.$primary-font;
+    color: variables.$text-light;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: variables.$secondary-dark;
+        color: variables.$text-dark;
+    }
+}
+
+main {
+
+    #starttext,
+    #SASS-text {
+        background-color: variables.$primary-light;
+        border: 2px solid variables.$head-light;
+
+        @media (prefers-color-scheme: dark) {
+            background-color: variables.$primary-dark;
+            border: 2px solid variables.$head-dark;
+        }
+
+        h2 {
+            color: variables.$head-light;
+            font-size: 180%;
+
+            @media (prefers-color-scheme: dark) {
+                color: variables.$head-dark;
+            }
+        }
+
+        p {
+            letter-spacing: 0.5px;
+            font-size: 110%;
+
+            @media only screen and (max-width: 650px) {
+                font-size: 100%;
+            }
+        }
+
+        ul {
+            line-height: 2em;
+        }
+    }
+
+    #SASS-text {
+
+        article {
+
+            h3 {
+                color: variables.$head-light;
+                font-size: 140%;
+
+                @media (prefers-color-scheme: dark) {
+                    color: variables.$head-dark;
+                }
+            }
+
+            div {
+
+                #up {
+                    font-size: 270%;
+                    color: rgb(79, 110, 101);
+
+                    @media (prefers-color-scheme: dark) {
+                        color: rgb(180, 211, 202);
+                    }
+                }
+
+                #down {
+                    font-size: 270%;
+                    color: rgb(141, 62, 62);
+
+                    @media (prefers-color-scheme: dark) {
+                        color: rgb(207, 148, 148);
+                    }
+                }
+            }
+
+            p {
+                line-height: 1.5em;
+                letter-spacing: 0.5px;
+            }
+        }
+
+        #art1 {
+            @include mixins.article-style("positive");
+
+            @media (prefers-color-scheme: dark) {
+                background-color: darken(variables.$color1, 40%);
+            }
+        }
+
+        #art2 {
+            @include mixins.article-style("negative");
+
+            @media (prefers-color-scheme: dark) {
+                background-color: darken(variables.$color2, 62%);
+            }
+        }
+
+        #art3 {
+            @include mixins.article-style("summary");
+
+            @media (prefers-color-scheme: dark) {
+                background-color: lighten(variables.$color3, 10%);
+                border: 2px solid rgb(180, 205, 243);
+            }
+        }
+    }
+
+    #bubble-section {
+
+        #section-head {
+            color: variables.$head-light;
+            font-size: 135%;
+
+            @media (prefers-color-scheme: dark) {
+                color: variables.$head-dark;
+            }
+        }
+
+        #bubble1,
+        #bubble2,
+        #bubble3 {
+            background-color: variables.$primary-light;
+            border: 2px solid variables.$head-light;
+
+            @media (prefers-color-scheme: dark) {
+                background-color: variables.$primary-dark;
+                border: 2px solid variables.$head-dark;
+                color: variables.$text-dark;
+            }
+
+            h3 {
+                @media (prefers-color-scheme: dark) {
+                    color: variables.$head-dark;
+                }
+            }
+        }
+
+    }
+}
+
+#ani-art {
+    @include mixins.articleStyling();
+
+    @media (prefers-color-scheme: dark) {
+        background-color: variables.$primary-dark;
+    }
+
+    h2 {
+        font-size: 190%;
+        color: #A64D79;
+
+        @media (prefers-color-scheme: dark) {
+            color: variables.$head-dark;
+        }
+    }
+
+    p,
+    ul {
+        font-size: 110%;
+    }
+}
+
+#ani-sec {
+
+    @include mixins.articleStyling();
+
+    @media (prefers-color-scheme: dark) {
+        background-color: variables.$primary-dark;
+    }
+
+    h3 {
+        font-size: 180%;
+        color: #A64D79;
+        text-align: center;
+        margin-bottom: 4%;
+
+        @media (prefers-color-scheme: dark) {
+            color: variables.$head-dark;
+        }
+    }
+
+    #img1,
+    #img2,
+    #img3 {
+        @media only screen and (max-width: 1200px) {
+            width: 280px;
+            margin-top: 2%;
+        }
+
+        @media only screen and (max-width: 500px) {
+            width: 230px;
+        }
+    }
+}
+
+#mov-art,
+#int-art,
+#mov-sec,
+#int-sec {
+    @include mixins.articleStyling();
+    background-color: variables.$primary-light;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: variables.$primary-dark;
+    }
+
+    h2 {
+        font-size: 190%;
+        color: #A64D79;
+
+        @media (prefers-color-scheme: dark) {
+            color: variables.$head-dark;
+        }
+    }
+
+    p,
+    ul {
+        font-size: 110%;
+    }
+}
+
+#mov-sec,
+#int-sec {
+
+    h3 {
+        font-size: 180%;
+        color: #A64D79;
+        text-align: center;
+        margin-bottom: 4%;
+
+        @media (prefers-color-scheme: dark) {
+            color: variables.$head-dark;
+        }
+    }
+}
+
+#ani-art,
+#ani-sec,
+#mov-art,
+#mov-sec,
+#int-art,
+#int-sec {
+
+    h2 {
+        @media only screen and (max-width: 900px) {
+            font-size: 160%;
+        }
+    }
+
+    h3 {
+        @media only screen and (max-width: 900px) {
+            font-size: 150%;
+        }
+    }
+
+    p,
+    ul {
+        @media only screen and (max-width: 900px) {
+            font-size: 100%;
+        }
+    }
+
+}
+
+footer {
+    background-color: variables.$primary-light;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: variables.$primary-dark;
+    }
+}

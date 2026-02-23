@@ -1,0 +1,314 @@
+@use "mixins";
+@use "details";
+
+#container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    display: grid;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: grid;
+    margin-bottom: 3%;
+
+    h1 {
+        padding: 1%;
+        text-align: center;
+
+        @media only screen and (max-width: 650px) {
+            font-size: 160%;
+        }
+    }
+
+    nav {
+        display: grid;
+        width: 100%;
+    }
+
+    ul {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(7, 1fr);
+        justify-self: center;
+        text-align: center;
+        list-style: none;
+        padding-left: 0;
+        padding-top: 2%;
+        padding-bottom: 2%;
+
+        @media only screen and (max-width: 1250px) {
+            grid-template-columns: none;
+            width: 30%;
+            justify-self: left;
+            margin-left: 4%;
+        }
+
+        @media only screen and (max-width: 500px) {
+            width: 45%;
+        }
+    }
+}
+
+main {
+    display: grid;
+
+    #starttext,
+    #SASS-text {
+        display: grid;
+        @extend %text;
+
+        @media only screen and (max-width: 1050px) {
+            width: 75%;
+        }
+
+        @media only screen and (max-width: 650px) {
+            width: 85%;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        p {
+            margin-top: 4%;
+            text-align: center;
+        }
+    }
+
+    #SASS-text {
+
+        article {
+            width: 95%;
+            justify-self: center;
+            margin-top: 3%;
+            margin-bottom: 3%;
+
+            h3 {
+                margin-left: 3%;
+                margin-bottom: 0;
+            }
+
+            div {
+                display: grid;
+                grid-template-columns: 60% 1fr;
+
+                @media only screen and (max-width: 1050px) {
+                    grid-template-columns: none;
+                }
+
+                #up,
+                #down {
+                    text-align: center;
+                    align-self: center;
+                }
+            }
+
+            p {
+                text-align: left;
+                max-width: 68ch;
+                margin-left: 2%;
+
+                @media only screen and (max-width: 1050px) {
+                    max-width: 85%;
+                }
+
+                @media only screen and (max-width: 650px) {
+                    max-width: 95%;
+                }
+            }
+        }
+    }
+
+    picture {
+        justify-self: right;
+        margin-right: 10%;
+        margin-top: 0;
+
+        @media only screen and (max-width: 1050px) {
+            margin-right: 5%;
+        }
+    }
+
+    #bubble-section {
+
+        #section-head {
+            margin-left: 3%;
+        }
+
+        #bubble1,
+        #bubble2 {
+            @include mixins.bubblePlacement();
+
+            @media only screen and (max-width: 1050px) {
+                width: 50%;
+            }
+
+            @media only screen and (max-width: 650px) {
+                width: 75%;
+            }
+        }
+
+        #bubble3 {
+            @include mixins.bubblePlacement();
+
+            @media only screen and (max-width: 1050px) {
+                width: 50%;
+            }
+
+            @media only screen and (max-width: 650px) {
+                width: 75%;
+            }
+
+            #forAnswer {
+                width: 15%;
+            }
+        }
+    }
+
+    #letter {
+        align-self: end;
+        justify-self: left;
+        margin-left: 4%;
+        margin-top: 4%;
+
+        img {
+            @media only screen and (max-width: 650px) {
+                width: 200px;
+            }
+        }
+    }
+}
+
+#main {
+    display: grid;
+}
+
+#ani-art {
+    @include mixins.articlePlacement();
+
+    h2 {
+        display: grid;
+        text-align: center;
+    }
+
+    p {
+        display: grid;
+        text-align: center;
+    }
+
+    ul {
+        display: grid;
+        line-height: 2em;
+    }
+}
+
+#ani-sec {
+    @include mixins.articlePlacement();
+
+    #bilder {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        justify-self: center;
+
+        @media only screen and (max-width: 1200px) {
+            grid-template-columns: none;
+        }
+
+        picture {
+            margin: 1%;
+            justify-self: center;
+        }
+    }
+}
+
+#mov-art,
+#int-art {
+    @include mixins.articlePlacement();
+
+    h2 {
+        display: grid;
+        text-align: center;
+    }
+
+    p {
+        display: grid;
+        text-align: center;
+    }
+
+    ul {
+        display: grid;
+        line-height: 2em;
+    }
+}
+
+#mov-sec {
+    @include mixins.articlePlacement();
+    margin-top: 20%;
+
+    @media only screen and (max-width: 650px) {
+        margin-top: 30%;
+        margin-bottom: 15%;
+    }
+
+    picture {
+        position: relative;
+        margin: 1%;
+        justify-self: center;
+    }
+
+    #img1 {
+        @media only screen and (max-width: 900px) {
+            width: 180px;
+        }
+
+        @media only screen and (max-width: 650px) {
+            width: 130px;
+        }
+    }
+}
+
+#int-sec {
+    @include mixins.articlePlacement();
+
+    @media only screen and (max-width: 1250px) {
+        margin-top: 10%;
+    }
+
+    @media only screen and (max-width: 1050px) {
+        margin-bottom: 40%;
+    }
+}
+
+#ani-art,
+#ani-sec,
+#mov-art,
+#mov-sec,
+#int-art,
+#int-sec {
+    @media only screen and (max-width: 1450px) {
+        width: 80%;
+    }
+
+    @media only screen and (max-width: 900px) {
+        width: 85%;
+    }
+
+}
+
+footer {
+    margin-top: 4%;
+    padding: 1%;
+    text-align: center;
+
+    @media only screen and (max-width: 650px) {
+        font-size: 90%;
+    }
+}

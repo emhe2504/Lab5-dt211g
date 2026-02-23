@@ -1,0 +1,53 @@
+#ani-art {
+    animation: animationArticle 6s ease-in-out infinite;
+
+    @media (prefers-color-scheme: dark) {
+        animation: animationArtDark 6s ease-in-out infinite;
+    }
+
+    h2 {
+        animation: HeadSize 7s ease-in-out infinite;
+    }
+}
+
+#ani-sec {
+
+    h3 {
+        animation: HeadShadow 7s ease infinite;
+    }
+
+    #img1 {
+        animation: animationIMG 3s ease-in-out 1;
+    }
+
+    #img2 {
+        animation: animationIMG 3s 1s ease-in-out 1;
+    }
+
+    #img3 {
+        animation: animationIMG 3s 2s ease-in-out 1;
+    }
+}
+
+#mov-sec {
+
+    picture {
+        animation: movingIMG 15s linear infinite;
+
+        @media only screen and (max-width: 1200px) {
+            animation: movingSmallIMG 10s linear infinite;
+        }
+    }
+}
+
+#int-art {
+    animation: mainReaction 5s infinite alternate linear;
+}
+
+#int-sec {
+    animation: mainReaction 5s 1.5s infinite alternate linear;
+}
+
+#main {
+    animation: mainReaction 5s 2s infinite alternate linear;
+}

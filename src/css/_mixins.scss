@@ -1,0 +1,40 @@
+@mixin bubblePlacement() {
+    display: grid;
+    width: 35%;
+    justify-self: left;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    padding: 2%;
+}
+
+@mixin article-style($style) {
+
+    @if $style =="positive" {
+        background-color: rgb(179, 206, 192);
+        border: 2px solid rgb(79, 110, 101);
+    }
+
+    @else if $style =="negative" {
+        background-color: rgb(247, 182, 182);
+        border: 2px solid rgb(141, 62, 62);
+    }
+
+    @else if $style =="summary" {
+        background-color: rgb(245, 234, 175);
+        border: 2px solid rgb(219, 169, 3);
+    }
+}
+
+@mixin articlePlacement() {
+    display: grid;
+    width: 65%;
+    justify-self: center;
+    margin: 2%;
+    padding: 2%;
+}
+
+@mixin articleStyling() {
+    background-color: white;
+    border: 3px solid #A64D79;
+    letter-spacing: 0.5px;
+}

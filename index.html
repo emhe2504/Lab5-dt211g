@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboration 5</title>
+  <link rel="stylesheet" href="/src/css/main.scss">
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1><a href="/">Styling med SCSS</a></h1>
+      <input type="button" id="menu" class="is_hidden" value="Meny &#9776;">
+      <nav>
+        <ul id="nav-list" class="is_hidden">
+          <li><a href="/">Startsida</a></li>
+          <li><a href="/SASS.html">SASS</a></li>
+          <li><a href="/animation.html">Animationer</a></li>
+          <li><a href="/movingobjects.html">Rörliga objekt</a></li>
+          <li><a href="/interaction.html">Interaktioner</a></li>
+          <li><a href="/diagram.html">Diagram</a></li>
+          <li><a href="/map.html">Karta</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article id="starttext">
+        <h2>Startsida</h2>
+        <p>Här lär vi oss styla med SCSS som en del av Laboration 3 i kursen DT211G. Vi lär oss bland annat använda:</p>
+        <ul>
+          <li>Variabler</li>
+          <li>Color functions</li>
+          <li>Nesting</li>
+          <li>Mixins</li>
+          <li>Selector inheritance</li>
+          <li>If/else-satser</li>
+          <li>Partials</li>
+        </ul>
+      </article>
+      <picture>
+        <source srcset="/images/hund.webp" type="image/webp">
+        <img src="/images/hund.jpg" width="300" alt="Svart hund med solglasögon och tass i luften">
+      </picture>
+      <section id="bubble-section">
+        <h3 id="section-head">Info-bubblor</h3>
+        <article id="bubble1">
+          <h3>Ändra utseende?</h3>
+          <p>Denna sida är även anpassad med ett färgschema för mörk läge.</p>
+        </article>
+        <article id="bubble2">
+          <h3>Visste du att?</h3>
+          <p>Människor delar cirka 60% DNA med bananer</p>
+        </article>
+        <article id="bubble3">
+          <h3>En gåta</h3>
+          <p>Vad är det som kan sitta i ett hörn, men ändå åka jorden runt?</p>
+          <input type="button" value="Svar" id="forAnswer">
+          <h4 id="answer" class="is_hidden">Frimärket</h4>
+          <picture id="letter" class="is_hidden">
+            <source srcset="/images/brev.webp" type="image/webp">
+            <img src="/images/brev.jpg" width="300" alt="Brev med frimärken">
+          </picture>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <h4>Webbutvecklingsprogrammet, kurs DT211G - Frontend-baserad webbutveckling</h4>
+      <p>2026 - Emma Heikkinen</p>
+    </footer>
+  </div>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>
