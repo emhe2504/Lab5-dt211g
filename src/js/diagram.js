@@ -1,6 +1,6 @@
 
 export function courseDiagram(mostApplicants, courses) {
-    
+
     const options = {
         series: [{
             name: 'Total applicants',
@@ -64,32 +64,39 @@ export function courseDiagram(mostApplicants, courses) {
 
     const chart = new ApexCharts(document.querySelector("#chart"), options);
     chart.render();
-}
+};
 
 
-export function programDiagram() {
-    
-      
-        const options = {
-          series: [44, 55, 13, 43, 22],
-          chart: {
-          width: 380,
-          type: 'pie',
+export function programDiagram(programApplicants, programs) {
+
+
+    const options = {
+        series: programApplicants,
+        chart: {
+            width: 700,
+            type: 'pie',
         },
-        labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 200
-            },
-            legend: {
-              position: 'bottom'
+        labels: programs,
+        colors: ["#850E35", "#EE6983", "#fda9a9", "#f8e2de", "#FCF5EE"],
+        dataLabels: {
+            enabled: true,
+            style: {
+                colors: ['white', 'white', "white", "#850E35", "#850E35"]
             }
-          }
+        },
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 200
+                },
+                legend: {
+                    position: 'bottom'
+                }
+            }
         }]
-        };
+    };
 
-        const chart = new ApexCharts(document.querySelector("#chartTwo"), options);
-        chart.render();
+    const chartTwo = new ApexCharts(document.querySelector("#chartTwo"), options);
+    chartTwo.render();
 }

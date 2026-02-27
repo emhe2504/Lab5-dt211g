@@ -357,7 +357,8 @@ main {
 }
 
 #diagramText,
-#courseSection {
+#courseSection,
+#courseSectionTwo {
     @include mixins.sectionStyling();
 
     @media (prefers-color-scheme: dark) {

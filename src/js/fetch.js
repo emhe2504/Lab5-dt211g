@@ -1,5 +1,6 @@
 
 import { courseDiagram } from "./diagram.js";
+import { programDiagram } from "./diagram.js";
 
 export async function importCourses() {
 
@@ -10,6 +11,7 @@ export async function importCourses() {
         const jsonData = await linkData.json(); //Hämta data i länk - JSON-text till Javascript-objekt
 
         diagramInfo(jsonData);
+        diagramInfoTwo(jsonData);
     }
 
     catch (error) {
@@ -19,26 +21,57 @@ export async function importCourses() {
         errorPlace.innerHTML = `
         <p>PROBLEM ATT LADDA DIAGRAM-DATA, vänligen testa igen..</p>
         `;
+
+        const errorPlaceTwo = document.getElementById("chartTwo"); //Error-meddelande
+        errorPlaceTwo.innerHTML = `
+        <p>PROBLEM ATT LADDA DIAGRAM-DATA, vänligen testa igen..</p>
+        `;
     }
 }
 
-function diagramInfo(data) { //Funktion för att fixa fram data till diagram
+function diagramInfo(jsonData) { //Funktion för att fixa fram data till diagram
 
-    const allCourses = data.filter(eachData => eachData.type === 'Kurs' || eachData.type === 'kurs'); //filtrera ut kurser, alternativ ifall olika stavning
+    const allCourses = jsonData.filter(eachData => eachData.type === 'Kurs' || eachData.type === 'kurs'); //filtrera ut kurser, alternativ ifall olika stavning
     const sortedCourses = allCourses.sort((a, b) => b.applicantsTotal - a.applicantsTotal); //sortera kurser med flest sökanden först
-    const topCourses = sortedCourses.slice(0, 6); //"Ta ut" sek mest sökta
+    const topCourses = sortedCourses.slice(0, 6); //"Ta ut" sex mest sökta
 
     const courses = [];
     const applicants = [];
 
     topCourses.forEach(course => { //För varje objekt i topCourses - pusha namn och sökantal till respektive array
         courses.push(course.name);
-        applicants.push(course.applicantsTotal);
+        applicants.push(Number(course.applicantsTotal)); //som nummer ej sträng
     });
+
 
     courseDiagram(applicants, courses);
 
 };
+
+
+function diagramInfoTwo(jsonData) { //Funktion för att fixa fram data till nästa diagram
+
+    const allPrograms = jsonData.filter(eachData => eachData.type === 'Program' || eachData.type === 'program'); //filtrera ut program, alternativ ifall olika stavning
+    const sortedPrograms = allPrograms.sort((a, b) => b.applicantsTotal - a.applicantsTotal); //sortera program med flest sökanden först
+    const topPrograms = sortedPrograms.slice(0, 5); //"Ta ut" fem mest sökta
+
+    const programs = [];
+    const programApplicants = [];
+
+    topPrograms.forEach(program => { //För varje objekt i topPrograms - pusha namn och sökantal till respektive array
+        programs.push(program.name);
+        programApplicants.push(Number(program.applicantsTotal)); //som nummer ej sträng
+    });
+
+    console.log(programApplicants);
+    console.log(programs);
+    programDiagram(programApplicants, programs);
+
+};
+
+
+
+
 
 
 /* Nedan är för mitt eget lärande! */

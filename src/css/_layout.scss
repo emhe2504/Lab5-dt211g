@@ -304,10 +304,15 @@ main {
 }
 
 #diagramText,
-#courseSection {
+#courseSection,
+#courseSectionTwo {
     @include mixins.articlePlacement();
     justify-content: center;
     text-align: center;
+
+    p {
+        margin-bottom: 5%;
+    }
 }
 
 footer {
