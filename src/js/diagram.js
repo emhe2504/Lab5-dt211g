@@ -1,12 +1,13 @@
 
 export function courseDiagram(mostApplicants, courses) {
+    
     const options = {
         series: [{
-            name: 'Servings',
+            name: 'Total applicants',
             data: mostApplicants
         }],
         chart: {
-            height: 350,
+            height: 450,
             width: 700,
             type: 'bar',
         },
@@ -16,7 +17,7 @@ export function courseDiagram(mostApplicants, courses) {
                 columnWidth: '50%',
             }
         },
-        colors: ['pink', 'pink'],
+        colors: ['#F6F09F', 'pink'],
         dataLabels: {
             enabled: false
         },
@@ -63,4 +64,32 @@ export function courseDiagram(mostApplicants, courses) {
 
     const chart = new ApexCharts(document.querySelector("#chart"), options);
     chart.render();
+}
+
+
+export function programDiagram() {
+    
+      
+        const options = {
+          series: [44, 55, 13, 43, 22],
+          chart: {
+          width: 380,
+          type: 'pie',
+        },
+        labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+        };
+
+        const chart = new ApexCharts(document.querySelector("#chartTwo"), options);
+        chart.render();
 }

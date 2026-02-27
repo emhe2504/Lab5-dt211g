@@ -1,4 +1,4 @@
-import {courseDiagram} from "./diagram.js";
+import {programDiagram} from "./diagram.js";
 import {importCourses} from "./fetch.js";
 
 
@@ -16,6 +16,7 @@ function init() {
     clickMenu(navigation, menu); //skickas med till funktionerna
     click();
     importCourses();
+    programDiagram();
 
     window.addEventListener("resize", () => getMenu(navigation, menu)); //skickas även här
 }

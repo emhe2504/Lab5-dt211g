@@ -31,7 +31,7 @@ function diagramInfo(data) { //Funktion för att fixa fram data till diagram
     const courses = [];
     const applicants = [];
 
-    topCourses.forEach(course => { //För varje objekt i topCourses - pusha namn och sökantal  till respektive array
+    topCourses.forEach(course => { //För varje objekt i topCourses - pusha namn och sökantal till respektive array
         courses.push(course.name);
         applicants.push(course.applicantsTotal);
     });
