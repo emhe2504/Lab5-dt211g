@@ -17,7 +17,7 @@ export function courseDiagram(mostApplicants, courses) {
                 columnWidth: '50%',
             }
         },
-        colors: ['#F6F09F', 'pink'],
+        colors: ['#df6dbd'],
         dataLabels: {
             enabled: false
         },
@@ -26,9 +26,6 @@ export function courseDiagram(mostApplicants, courses) {
         },
         grid: {
             show: true,
-            row: {
-                colors: ['#f5b1d8', '#f89fc9']
-            },
             padding: {
                 left: 0,
                 right: 0
@@ -53,9 +50,9 @@ export function courseDiagram(mostApplicants, courses) {
                 shade: 'light',
                 type: "horizontal",
                 shadeIntensity: 0.25,
-                gradientToColors: ['#db1360'],
+                gradientToColors: ['#f8f3f6'],
                 inverseColors: false,
-                opacityFrom: 0.85,
+                opacityFrom: 0.75,
                 opacityTo: 0.85,
                 stops: [0, 100]
             },
@@ -77,11 +74,11 @@ export function programDiagram(programApplicants, programs) {
             type: 'pie',
         },
         labels: programs,
-        colors: ["#850E35", "#EE6983", "#fda9a9", "#f8e2de", "#FCF5EE"],
+        colors: ["#55031e", "#800830", "#cc104e", "#fa6194", "#ffb8d0"],
         dataLabels: {
             enabled: true,
             style: {
-                colors: ['white', 'white', "white", "#850E35", "#850E35"]
+                color: ['white']
             }
         },
         responsive: [{
