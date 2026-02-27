@@ -1,5 +1,5 @@
 
-export function courseDiagram(mostApplicants) {
+export function courseDiagram(mostApplicants, courses) {
     const options = {
         series: [{
             name: 'Servings',
@@ -37,8 +37,7 @@ export function courseDiagram(mostApplicants) {
             labels: {
                 rotate: -45
             },
-            categories: ['Apples', 'Oranges', 'Strawberries', 'Pineapples', 'Mangoes', 'Bananas'
-            ],
+            categories: courses,
             tickPlacement: 'between',
             axisTicks: { show: true },
         },

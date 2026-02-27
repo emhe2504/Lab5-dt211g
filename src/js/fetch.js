@@ -24,20 +24,36 @@ export async function importCourses() {
 
 function diagramInfo(data) { //Steg 1 - funktion för att fixa fram data till diagram
 
+    const allArrays = [];
     const applicants = []; //Hit kommer alla ansökningsantal för kurser
+    const courses = [];
 
     data.forEach(part => { //För varje "del" i data, gör nedanstående
 
         const educationType = part.type;
         const applicantsTotal = part.applicantsTotal;
 
+        allArrays.push(Object.values(part)); //Istället för array med objekt, array med arrayer
+
         if (educationType === 'Kurs' || educationType === 'Kurs') {
 
             applicants.push(applicantsTotal);
         }
-        
+
     });
 
     const mostApplicants = applicants.sort((a, b) => b - a).slice(0, 6);  //sorterar ut de sex högsta ansökningsantalen på kurser
-    courseDiagram(mostApplicants); //Skickar med till diagrammet
-}
+
+    allArrays.sort((a, b) => b[3] - a[3]); //Sortera alla array i storleksordning (flest sökande - minst sökande)
+
+    allArrays.forEach(array => { //För varje array i allArrays
+        const appliNumber = array[3]; //"Ta ut" värdet (totalt antal sökanden)
+
+    if (mostApplicants.includes(appliNumber)) { //Om (totalt antal sökanden) finns i mostApplicants
+        courses.push(array[1]); //Pusha motsvarande kursnamn till course
+    }
+
+    })
+
+    courseDiagram(mostApplicants, courses); //Skickar arrayer med sex högsta ansökningsantalen respektive sex mest sökta kurser till diagrammet
+};
