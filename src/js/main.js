@@ -1,4 +1,5 @@
 import {courseDiagram} from "./diagram.js";
+import {importCourses} from "./fetch.js";
 
 
 "use strict"
@@ -14,7 +15,7 @@ function init() {
     getMenu(navigation, menu);
     clickMenu(navigation, menu); //skickas med till funktionerna
     click();
-    courseDiagram();
+    importCourses();
 
     window.addEventListener("resize", () => getMenu(navigation, menu)); //skickas även här
 }

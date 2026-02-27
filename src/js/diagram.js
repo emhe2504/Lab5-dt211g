@@ -1,9 +1,9 @@
 
-export function courseDiagram() {
+export function courseDiagram(mostApplicants) {
     const options = {
         series: [{
             name: 'Servings',
-            data: [44, 55, 41, 67, 22, 43]
+            data: mostApplicants
         }],
         chart: {
             height: 350,
@@ -53,7 +53,7 @@ export function courseDiagram() {
                 shade: 'light',
                 type: "horizontal",
                 shadeIntensity: 0.25,
-                gradientToColors: ['#da3675'],
+                gradientToColors: ['#db1360'],
                 inverseColors: false,
                 opacityFrom: 0.85,
                 opacityTo: 0.85,
