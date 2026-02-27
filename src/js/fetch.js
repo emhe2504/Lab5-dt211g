@@ -22,7 +22,37 @@ export async function importCourses() {
     }
 }
 
-function diagramInfo(data) { //Steg 1 - funktion för att fixa fram data till diagram
+function diagramInfo(data) { //Funktion för att fixa fram data till diagram
+
+    const allCourses = data.filter(eachData => eachData.type === 'Kurs' || eachData.type === 'kurs'); //filtrera ut kurser, alternativ ifall olika stavning
+    const sortedCourses = allCourses.sort((a, b) => b.applicantsTotal - a.applicantsTotal); //sortera kurser med flest sökanden först
+    const topCourses = sortedCourses.slice(0, 6); //"Ta ut" sek mest sökta
+
+    const courses = [];
+    const applicants = [];
+
+    topCourses.forEach(course => { //För varje objekt i topCourses - pusha namn och sökantal  till respektive array
+        courses.push(course.name);
+        applicants.push(course.applicantsTotal);
+    });
+
+    courseDiagram(applicants, courses);
+
+};
+
+
+/* Nedan är för mitt eget lärande! */
+
+/* Var ej nöjd med min gamla kod. Förstod redan när jag skrev den att göra om till arrayer och arbeta med siffror inte var ett
+säkert sätt att arbeta, men hade problem med att nå "part" utanför forEach och arbetade jag i denna fick jag upprepningar.
+Googlade, hittade "filter" och förstod att jag kunde sköta filtrering/sorteringen för alla delar och sedan pusha, istället för att dela upp i två delar. */
+
+/* Nedan är min gamla kod "diagramInfo(data)", se ovan är hur jag gjorde om den */
+
+
+/* 
+
+ function diagramInfo(data) { //Steg 1 - funktion för att fixa fram data till diagram
 
     const allArrays = [];
     const applicants = []; //Hit kommer alla ansökningsantal för kurser
@@ -57,3 +87,5 @@ function diagramInfo(data) { //Steg 1 - funktion för att fixa fram data till di
 
     courseDiagram(mostApplicants, courses); //Skickar arrayer med sex högsta ansökningsantalen respektive sex mest sökta kurser till diagrammet
 };
+
+*/
