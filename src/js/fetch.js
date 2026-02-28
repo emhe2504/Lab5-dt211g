@@ -2,13 +2,17 @@
 import { courseDiagram } from "./diagram.js";
 import { programDiagram } from "./diagram.js";
 
+/**
+ * Fetchar antagningsstatistik från länk med JSON-data och skickar till diagramfunktioner
+ */
+
 export async function importCourses() {
 
     const link = "https://mallarmiun.github.io/Frontend-baserad-webbutveckling/Moment%205%20-%20Dynamiska%20webbplatser/statistik_sokande_ht25.json";
 
     try {
         const linkData = await fetch(link);
-        const jsonData = await linkData.json(); //Hämta data i länk - JSON-text till Javascript-objekt
+        const jsonData = await linkData.json(); 
 
         diagramInfo(jsonData);
         diagramInfoTwo(jsonData);
@@ -29,18 +33,24 @@ export async function importCourses() {
     }
 }
 
-function diagramInfo(jsonData) { //Funktion för att fixa fram data till diagram
+/**
+ * Fixar fram, sorterar och filtrerar data 
+ * och skickar till stapeldiagram (courseDiagram)
+ * @param {Array<Object>} jsonData - antagningsstatistik från API 
+ */
 
-    const allCourses = jsonData.filter(eachData => eachData.type === 'Kurs' || eachData.type === 'kurs'); //filtrera ut kurser, alternativ ifall olika stavning
-    const sortedCourses = allCourses.sort((a, b) => b.applicantsTotal - a.applicantsTotal); //sortera kurser med flest sökanden först
-    const topCourses = sortedCourses.slice(0, 6); //"Ta ut" sex mest sökta
+function diagramInfo(jsonData) { 
+
+    const allCourses = jsonData.filter(eachData => eachData.type === 'Kurs' || eachData.type === 'kurs'); //filtrera ut kurser
+    const sortedCourses = allCourses.sort((a, b) => b.applicantsTotal - a.applicantsTotal); //flest sökanden först
+    const topCourses = sortedCourses.slice(0, 6); //sex mest sökta
 
     const courses = [];
     const applicants = [];
 
-    topCourses.forEach(course => { //För varje objekt i topCourses - pusha namn och sökantal till respektive array
+    topCourses.forEach(course => { //pusha till respektive array
         courses.push(course.name);
-        applicants.push(Number(course.applicantsTotal)); //som nummer ej sträng
+        applicants.push(Number(course.applicantsTotal)); //nummer ej sträng
     });
 
 
@@ -48,26 +58,33 @@ function diagramInfo(jsonData) { //Funktion för att fixa fram data till diagram
 
 };
 
+/**
+ * Fixar fram, sorterar och filtrerar data 
+ * och skickar till cirkeldiagram (programDiagram)
+ * @param {Array<Object>} jsonData - antagningsstatistik från API 
+ */
 
 function diagramInfoTwo(jsonData) { //Funktion för att fixa fram data till nästa diagram
 
-    const allPrograms = jsonData.filter(eachData => eachData.type === 'Program' || eachData.type === 'program'); //filtrera ut program, alternativ ifall olika stavning
-    const sortedPrograms = allPrograms.sort((a, b) => b.applicantsTotal - a.applicantsTotal); //sortera program med flest sökanden först
-    const topPrograms = sortedPrograms.slice(0, 5); //"Ta ut" fem mest sökta
+    const allPrograms = jsonData.filter(eachData => eachData.type === 'Program' || eachData.type === 'program'); //filtrera ut program
+    const sortedPrograms = allPrograms.sort((a, b) => b.applicantsTotal - a.applicantsTotal); //flest sökanden först
+    const topPrograms = sortedPrograms.slice(0, 5); //fem mest sökta
 
     const programs = [];
     const programApplicants = [];
 
-    topPrograms.forEach(program => { //För varje objekt i topPrograms - pusha namn och sökantal till respektive array
+    topPrograms.forEach(program => { //pusha till respektive array
         programs.push(program.name);
-        programApplicants.push(Number(program.applicantsTotal)); //som nummer ej sträng
+        programApplicants.push(Number(program.applicantsTotal)); //nummer ej sträng
     });
 
-    console.log(programApplicants);
-    console.log(programs);
     programDiagram(programApplicants, programs);
 
 };
+
+
+
+
 
 
 
