@@ -1,6 +1,7 @@
 import {courseDiagram} from "./diagram.js";
 import {programDiagram} from "./diagram.js";
 import {importCourses} from "./fetch.js";
+import {createMap} from "./map.js";
 
 
 "use strict"
@@ -17,6 +18,7 @@ function init() {
     clickMenu(navigation, menu); //skickas med till funktionerna
     click();
     importCourses();
+    createMap();
 
     window.addEventListener("resize", () => getMenu(navigation, menu)); //skickas även här
 }

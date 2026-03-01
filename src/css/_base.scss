@@ -358,7 +358,9 @@ main {
 
 #diagramText,
 #courseSection,
-#courseSectionTwo {
+#courseSectionTwo,
+#mapText,
+#mapSection {
     @include mixins.sectionStyling();
 
     @media (prefers-color-scheme: dark) {
@@ -367,7 +369,7 @@ main {
 
     h2 {
         font-size: 190%;
-        color: #A64D79;
+        color: variables.$head-light;
 
         @media (prefers-color-scheme: dark) {
             color: variables.$head-dark;
@@ -376,7 +378,7 @@ main {
 
     h3 {
         font-size: 170%;
-        color: #A64D79;
+        color: variables.$head-light;
 
         @media (prefers-color-scheme: dark) {
             color: variables.$head-dark;

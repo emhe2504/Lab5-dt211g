@@ -305,7 +305,9 @@ main {
 
 #diagramText,
 #courseSection,
-#courseSectionTwo {
+#courseSectionTwo,
+#mapText,
+#mapSection {
     @include mixins.articlePlacement();
     justify-content: center;
     text-align: center;
@@ -313,6 +315,11 @@ main {
     p {
         margin-bottom: 5%;
     }
+}
+
+#map { 
+    height: 380px; 
+    width: 380px;
 }
 
 footer {
