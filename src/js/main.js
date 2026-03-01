@@ -1,8 +1,9 @@
-import {courseDiagram} from "./diagram.js";
-import {programDiagram} from "./diagram.js";
-import {importCourses} from "./fetch.js";
-import {createMap} from "./map.js";
-
+import { courseDiagram } from "./diagram.js";
+import { programDiagram } from "./diagram.js";
+import { importCourses } from "./diagramFetch.js";
+import { createMap } from "./map.js";
+import { getSearch } from "./map.js";
+import { mapPlace } from "./map.js";
 
 "use strict"
 

@@ -318,8 +318,10 @@ main {
 }
 
 #map { 
-    height: 380px; 
-    width: 380px;
+    display: grid;
+    height: 500px; 
+    width: 500px;
+    justify-self: center;
 }
 
 footer {

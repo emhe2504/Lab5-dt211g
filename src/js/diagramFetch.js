@@ -22,9 +22,7 @@ export async function importCourses() {
         console.error(error);
 
         const errorPlace = document.getElementById("chart"); //Error-meddelande
-        errorPlace.innerHTML = `
-        <p>PROBLEM ATT LADDA DIAGRAM-DATA, vänligen testa igen..</p>
-        `;
+        errorPlace.innerHTML = `<p>PROBLEM ATT LADDA DIAGRAM-DATA, vänligen testa igen..</p>`;
 
         const errorPlaceTwo = document.getElementById("chartTwo"); //Error-meddelande
         errorPlaceTwo.innerHTML = `

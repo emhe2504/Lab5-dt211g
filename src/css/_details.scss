@@ -74,3 +74,30 @@
 #chartTwo {
     justify-self: center;
 }
+
+#search {
+    display: grid;
+    justify-self: left;
+    margin: 2%;
+    width: 60%;
+    border: 0.5px solid variables.$head-light;
+    padding: 1%;
+}
+
+#searchLabel {
+    display: grid;
+    justify-self: left;
+    margin-left: 3%;
+}
+
+#searchButton {
+    display: grid;
+    justify-self: left;
+    margin: 2%;
+    margin-bottom: 5%;
+    width: 25%;
+    background-color: white;
+    border: 0.5px solid variables.$head-light;
+    color: variables.$head-light;
+    font-weight: bold;
+}

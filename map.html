@@ -32,11 +32,15 @@
     <main>
       <article id="mapText">
         <h2>Karta</h2>
-        <p>Välkommen till sidan för karta. Här har det lagts in en karta från Leaflet.</p>
+        <p>Välkommen till sidan för karta. Här har det lagts in en karta från Leaflet som med hjälp av Nominatim kan ange platser.</p>
       </article>
       <section id="mapSection">
         <h3>Karta</h3>
         <p>Nedan ser du kartan där du kan söka valfri position. Vi startar i Stockholm.</p>
+        <label for="search" id="searchLabel">Sök plats: </label>
+        <input type="text" id="search" placeholder="Ex. Uppsala">
+        <button id="searchButton">Sök</button>
+        <p id="errorPlacement"></p>
         <div id="map"></div>
       </section>
     </main>
