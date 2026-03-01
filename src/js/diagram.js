@@ -1,4 +1,10 @@
 
+/**
+ * Skapar stapeldiagram med sex mest sökta kurser
+ * @param {number[]} mostApplicants - ansökningsantal för kurserna
+ * @param {string[]} courses - sex mest sökta kurserna
+ */
+
 export function courseDiagram(mostApplicants, courses) {
 
     const options = {
@@ -61,8 +67,13 @@ export function courseDiagram(mostApplicants, courses) {
 
     const chart = new ApexCharts(document.querySelector("#chart"), options);
     chart.render();
-};
+}
 
+/**
+ * Skapar cirkeldiagram med fem mest sökta program
+ * @param {number[]} programApplicants - ansökningsantal för programmen
+ * @param {string[]} programs - fem mest sökta programmen
+ */
 
 export function programDiagram(programApplicants, programs) {
 
