@@ -13,10 +13,55 @@ export function courseDiagram(mostApplicants, courses) {
             data: mostApplicants
         }],
         chart: {
-            height: 450,
+            height: 900,
             width: 700,
-            type: 'bar',
+            type: 'bar'
         },
+        responsive: [
+            {
+                breakpoint: 1024,
+                options: {
+                    chart: {
+                        width: 500,
+                        height: 850
+                    }
+                }
+            },
+            {
+                breakpoint: 850,
+                options: {
+                    chart: {
+                        width: 400,
+                        height: 750
+                    },
+                    xaxis: {
+                        labels: {
+                            style: {
+                                fontSize: '10px'
+                            },
+                        }
+                    }
+                }
+            },
+            {
+                breakpoint: 700,
+                options: {
+                    chart: {
+                        width: 350,
+                        height: 700
+                    }
+                }
+            },
+            {
+                breakpoint: 500,
+                options: {
+                    chart: {
+                        width: 320,
+                        height: 700
+                    }
+                }
+            }
+        ],
         plotOptions: {
             bar: {
                 borderRadius: 10,
@@ -34,12 +79,16 @@ export function courseDiagram(mostApplicants, courses) {
             show: true,
             padding: {
                 left: 0,
-                right: 0
+                right: 0,
+                bottom: 300
             }
         },
         xaxis: {
             labels: {
-                rotate: -45
+                rotate: -80,
+                style: {
+                    fontSize: '12px'
+                },
             },
             categories: courses,
             tickPlacement: 'between',
@@ -89,20 +138,45 @@ export function programDiagram(programApplicants, programs) {
         dataLabels: {
             enabled: true,
             style: {
+                fontSize: '12px',
                 color: ['white']
             }
         },
-        responsive: [{
-            breakpoint: 480,
-            options: {
-                chart: {
-                    width: 200
-                },
-                legend: {
-                    position: 'bottom'
+        legend: {
+            labels: {
+                style: {
+                    fontSize: '12px'
                 }
             }
-        }]
+        },
+        responsive: [
+            {
+                breakpoint: 800,
+                options: {
+                    chart: {
+                        width: 400
+                    },
+                    legend: {
+                        position: 'bottom',
+                        fontSize: '11px'
+                    },
+                    dataLabels: {
+                        enabled: true,
+                        style: {
+                            fontSize: '10px',
+                        }
+                    }
+                }
+            },
+            {
+                breakpoint: 900,
+                options: {
+                    chart: {
+                        width: 600
+                    }
+                }
+            }
+        ]
     };
 
     const chartTwo = new ApexCharts(document.querySelector("#chartTwo"), options);

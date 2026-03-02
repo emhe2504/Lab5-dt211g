@@ -77,4 +77,7 @@ function createMarker(latitudes, longitudes) {
 
     L.marker([lat, lon]).addTo(map);
     map.setView([lat, lon], 14);
+
+    const cordPlace = document.getElementById("coordinates");
+    cordPlace.innerHTML = `<p>Latitud: ${lat}, Longitud: ${lon} </p>`;
 }

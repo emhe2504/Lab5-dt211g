@@ -68,7 +68,7 @@
 }
 
 #chart {
-    margin-bottom: 15%;
+    margin-bottom: 5%;
 }
 
 #chartTwo {
@@ -82,6 +82,10 @@
     width: 60%;
     border: 0.5px solid variables.$head-light;
     padding: 1%;
+
+    @media only screen and (max-width: 1250px) {
+        width: 70%;
+    }
 }
 
 #searchLabel {
@@ -100,4 +104,8 @@
     border: 0.5px solid variables.$head-light;
     color: variables.$head-light;
     font-weight: bold;
+
+    @media only screen and (max-width: 1250px) {
+        width: 35%;
+    }
 }

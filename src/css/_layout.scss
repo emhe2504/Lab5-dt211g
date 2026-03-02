@@ -305,7 +305,7 @@ main {
 
 #diagramText,
 #courseSection,
-#courseSectionTwo,
+#programSection,
 #mapText,
 #mapSection {
     @include mixins.articlePlacement();
@@ -315,13 +315,31 @@ main {
     p {
         margin-bottom: 5%;
     }
+
+    @media only screen and (max-width: 1250px) {
+        width: 80%;
+    }
+
+    @media only screen and (max-width: 900px) {
+        width: 85%;
+    }
 }
 
-#map { 
+#map {
     display: grid;
-    height: 500px; 
+    height: 500px;
     width: 500px;
     justify-self: center;
+
+    @media only screen and (max-width: 750px) {
+        height: 350px;
+        width: 350px;
+    }
+
+    @media only screen and (max-width: 500px) {
+        height: 300px;
+        width: 300px;
+    }
 }
 
 footer {

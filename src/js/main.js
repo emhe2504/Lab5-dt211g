@@ -18,8 +18,14 @@ function init() {
     getMenu(navigation, menu);
     clickMenu(navigation, menu); //skickas med till funktionerna
     click();
-    importCourses();
-    createMap();
+
+    if (document.getElementById("chart")) {
+        importCourses();
+    }
+
+    if (document.getElementById("map")) {
+        createMap();
+    }
 
     window.addEventListener("resize", () => getMenu(navigation, menu)); //skickas även här
 }

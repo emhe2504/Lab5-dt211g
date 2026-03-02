@@ -358,7 +358,7 @@ main {
 
 #diagramText,
 #courseSection,
-#courseSectionTwo,
+#programSection,
 #mapText,
 #mapSection {
     @include mixins.sectionStyling();
@@ -382,6 +382,12 @@ main {
 
         @media (prefers-color-scheme: dark) {
             color: variables.$head-dark;
+        }
+    }
+
+    p {
+        @media only screen and (max-width: 650px) {
+            font-size: 90%;
         }
     }
 }
