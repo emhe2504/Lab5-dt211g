@@ -47,7 +47,7 @@ export function courseDiagram(mostApplicants, courses) {
                 breakpoint: 700,
                 options: {
                     chart: {
-                        width: 300,
+                        width: 280,
                         height: 700
                     }
                 }
@@ -145,11 +145,11 @@ export function programDiagram(programApplicants, programs) {
                 breakpoint: 800,
                 options: {
                     chart: {
-                        width: 400
+                        width: 350
                     },
                     legend: {
                         position: 'bottom',
-                        fontSize: '11px'
+                        fontSize: '10px'
                     },
                     dataLabels: {
                         enabled: true,
