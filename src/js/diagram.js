@@ -47,16 +47,7 @@ export function courseDiagram(mostApplicants, courses) {
                 breakpoint: 700,
                 options: {
                     chart: {
-                        width: 350,
-                        height: 700
-                    }
-                }
-            },
-            {
-                breakpoint: 500,
-                options: {
-                    chart: {
-                        width: 320,
+                        width: 300,
                         height: 700
                     }
                 }
