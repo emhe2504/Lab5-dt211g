@@ -1,6 +1,13 @@
 
+/**@type {L.Map} Leaflet-karta */
 let map;
+
+/**@type {HTMLInputElement} Sökfält för plats */
 let searchPlace;
+
+/**
+ * Skapar kartan från Leaflet och triggar nästa funktion
+ */
 
 export function createMap() {
 
@@ -13,6 +20,10 @@ export function createMap() {
 
     getSearch();
 }
+
+/**
+ * Skapar sökfunktion och tar värdet därifrån, skickar vidare
+ */
 
 export function getSearch() {
 
@@ -27,6 +38,11 @@ export function getSearch() {
         mapPlace(bigLetterValue);
     });
 }
+
+/**
+ * fetchar platsinfo API utifrån sök-value som skickas hit
+ * @param {string} bigLetterValue - sökvärdet (med stor bokstav)
+ */
 
 export async function mapPlace(bigLetterValue) {
 
@@ -52,6 +68,13 @@ export async function mapPlace(bigLetterValue) {
     }
 }
 
+/**
+ * Tar emot platsinfo från API
+ * och skapar arrayer med
+ * latitud samt longitud
+ * @param {Array<Object>} jsonInfo - array med platsobjekt från API
+ */
+
 function mapSearch(jsonInfo) {
 
     const latitudes = [];
@@ -69,6 +92,14 @@ function mapSearch(jsonInfo) {
     createMarker(latitudes, longitudes);
 
 }
+
+/**
+ * Skapar markör på karta med första koordinaterna
+ * i arrayerna + 
+ * skriver ut koordinater på skärmen
+ * @param {Array<number>} latitudes 
+ * @param {Array<number>} longitudes 
+ */
 
 function createMarker(latitudes, longitudes) {
 
