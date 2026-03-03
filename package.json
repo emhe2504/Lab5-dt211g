@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build:js": "vite build",
+    "build:sass": "sass src/css/main.scss dist/css/main.css",
+    "build:docs": "npx jsdoc js/diagram-doc.js js/map-doc.js -d dist/docs",
+    "build": "npm run build:sass && npm run build:js && npm run build:docs",
     "preview": "vite preview",
     "sass": "sass src/css/main.scss src/css/main.css --watch"
   },
