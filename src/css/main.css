@@ -222,7 +222,7 @@ main #bubble-section #bubble3 {
 
 #ani-art {
   background-color: white;
-  border: 3px solid #A64D79;
+  border: 3px solid #8A244B;
   letter-spacing: 0.5px;
 }
 @media (prefers-color-scheme: dark) {
@@ -246,7 +246,7 @@ main #bubble-section #bubble3 {
 
 #ani-sec {
   background-color: white;
-  border: 3px solid #A64D79;
+  border: 3px solid #8A244B;
   letter-spacing: 0.5px;
 }
 @media (prefers-color-scheme: dark) {
@@ -286,7 +286,7 @@ main #bubble-section #bubble3 {
 #mov-sec,
 #int-sec {
   background-color: white;
-  border: 3px solid #A64D79;
+  border: 3px solid #8A244B;
   letter-spacing: 0.5px;
   background-color: #FFE3ED;
 }
@@ -375,6 +375,68 @@ main #bubble-section #bubble3 {
   }
 }
 
+#diagramText,
+#courseSection,
+#programSection,
+#mapText,
+#mapSection {
+  background-color: #FFE3ED;
+  border: 2px solid #8A244B;
+  letter-spacing: 0.5px;
+}
+@media (prefers-color-scheme: dark) {
+  #diagramText,
+  #courseSection,
+  #programSection,
+  #mapText,
+  #mapSection {
+    background-color: #234C6A;
+  }
+}
+#diagramText h2,
+#courseSection h2,
+#programSection h2,
+#mapText h2,
+#mapSection h2 {
+  font-size: 190%;
+  color: #8A244B;
+}
+@media (prefers-color-scheme: dark) {
+  #diagramText h2,
+  #courseSection h2,
+  #programSection h2,
+  #mapText h2,
+  #mapSection h2 {
+    color: #DDAED3;
+  }
+}
+#diagramText h3,
+#courseSection h3,
+#programSection h3,
+#mapText h3,
+#mapSection h3 {
+  font-size: 170%;
+  color: #8A244B;
+}
+@media (prefers-color-scheme: dark) {
+  #diagramText h3,
+  #courseSection h3,
+  #programSection h3,
+  #mapText h3,
+  #mapSection h3 {
+    color: #DDAED3;
+  }
+}
+@media only screen and (max-width: 650px) {
+  #diagramText p,
+  #courseSection p,
+  #programSection p,
+  #mapText p,
+  #mapSection p {
+    font-size: 90%;
+  }
+}
+
 footer {
   background-color: #FFE3ED;
 }
@@ -450,6 +512,51 @@ main #SASS-text {
 #button:hover {
   background-color: rgb(250, 169, 196);
   transition: background-color 0.8s ease;
+}
+
+#chart {
+  margin-bottom: 5%;
+}
+
+#chartTwo {
+  justify-self: center;
+}
+
+#search {
+  display: grid;
+  justify-self: left;
+  margin: 2%;
+  width: 60%;
+  border: 0.5px solid #8A244B;
+  padding: 1%;
+}
+@media only screen and (max-width: 1250px) {
+  #search {
+    width: 70%;
+  }
+}
+
+#searchLabel {
+  display: grid;
+  justify-self: left;
+  margin-left: 3%;
+}
+
+#searchButton {
+  display: grid;
+  justify-self: left;
+  margin: 2%;
+  margin-bottom: 5%;
+  width: 25%;
+  background-color: white;
+  border: 0.5px solid #8A244B;
+  color: #8A244B;
+  font-weight: bold;
+}
+@media only screen and (max-width: 1250px) {
+  #searchButton {
+    width: 35%;
+  }
 }
 
 #container {
@@ -778,6 +885,64 @@ main #letter {
   #int-art,
   #int-sec {
     width: 85%;
+  }
+}
+
+#diagramText,
+#courseSection,
+#programSection,
+#mapText,
+#mapSection {
+  display: grid;
+  width: 65%;
+  justify-self: center;
+  margin: 2%;
+  padding: 2%;
+  justify-content: center;
+  text-align: center;
+}
+#diagramText p,
+#courseSection p,
+#programSection p,
+#mapText p,
+#mapSection p {
+  margin-bottom: 5%;
+}
+@media only screen and (max-width: 1250px) {
+  #diagramText,
+  #courseSection,
+  #programSection,
+  #mapText,
+  #mapSection {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #diagramText,
+  #courseSection,
+  #programSection,
+  #mapText,
+  #mapSection {
+    width: 85%;
+  }
+}
+
+#map {
+  display: grid;
+  height: 500px;
+  width: 500px;
+  justify-self: center;
+}
+@media only screen and (max-width: 750px) {
+  #map {
+    height: 350px;
+    width: 350px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #map {
+    height: 300px;
+    width: 300px;
   }
 }
 
